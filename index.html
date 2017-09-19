@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8">
@@ -39,7 +39,6 @@
                 color: #00539F;
                 text-shadow: 3px 3px 1px green;
             }
-           </style>
             
             #java
             {
@@ -56,8 +55,14 @@
                 display: inline-block;
                 cursor:pointer;
             }
-
-                
+            
+            #javaknop
+            {
+                font: 'times new roman';
+                color: purple;
+            }
+            </style>
+            
 
     </head>
     <body>
@@ -74,10 +79,30 @@
         <li> Boobies </li>
         <li> Appeltaart </li>
         
+        <br>
+        <br>
         
+        
+        <div id = "javaknop">
+            Dush, druk op de knop hieronder om te beginnen met het invoeren van je naam.
+        </div>
+        
+        <br>
+        <br>
+       
         <div id = "java">Player 1: Nog niemand</div>
         
+    <script>
+        var para = document.querySelector('#java');
         
+        para.addEventListener('click', updateName);
+        
+        function updateName() {
+            var name = prompt('Enter a new name');
+            para.textContent = 'Player 1: ' + name;
+        }
+    
+    </script>
         
     </body>
 </html>
